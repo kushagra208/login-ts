@@ -3,7 +3,7 @@
 The webapp was created using Vite.
 Frontend is made using React with Typescript.<br>
 THe styling of the project is done using tailwind CSS
-
+Project Link-https://login-ts.vercel.app/
 ## Details
 A private route is made to check whether the user has logged in or not.<br>
 If not the user will be redirected to the login page else he will be redirected to the home.
