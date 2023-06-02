@@ -36,12 +36,12 @@ const Login = () => {
     }, [email , password])
 
   return (
-    <div className="relative flex flex-row justify-center items-center min-h-screen p-5">
-        <div className="relative w-half flex items-center justify-center bg-background bg-cover h-full rounded-3xl">
+    <div className="relative gap-10 flex flex-col justify-center items-center min-h-screen p-5 md:flex-row overflow-hidden">
+        <div className="relative w-full flex items-center justify-center bg-background bg-cover h-full rounded-3xl md:w-half">
             <img src={text} alt="exo" className="absolute top-8 left-8 w-20" />
             <div className="slider h-1/2 relative">
             <Carousel
-            style={{ height: "60%" , left: -350 , top: 100 , width: "100%" , position: "absolute"  }}
+            style={{ height: "60%" , left: "-20vw" , top: 100 , width: "100%" , position: "absolute"  }}
                 className="rounded-xl"
                 navigation={({ setActiveIndex, activeIndex, length }) => (
                     <div className="absolute bottom-4 left-12 z-50 flex -translate-x-2/4 gap-2">
@@ -96,17 +96,17 @@ const Login = () => {
                 <input type="email" 
                 placeholder="Enter your email" 
                 id = "email"
-                className="w-med border-solid border-2 border-custom p-4 rounded-ten" 
+                className=" w-med md:w-half flex border-solid border-2 border-custom p-4 rounded-ten" 
                 />
-                <div className="relative">
+                <div className="relative w-med md:w-half flex">
                 <input type={show ? "text" : "password"} 
                 placeholder = "Enter your password" 
                 id = "password"
-                className="w-med border-solid border-2 border-custom p-4 rounded-ten"
+                className="w-full border-solid border-2 border-custom p-4 rounded-ten"
                 />
                 <img src={show ? hide : seen} alt="" onClick = {() => setShow(!show)} className="absolute right-4 top-6" />
                 </div>
-                <button type="submit" id = "btn" className="w-med bg-black text-white p-4 text-xl font-medium rounded-ten shadow-custom">Log In</button>
+                <button type="submit" id = "btn" className="w-med md:w-half bg-black text-white p-4 text-xl font-medium rounded-ten shadow-custom">Log In</button>
             </form>
             <p className="text-lg">Don't have an account yet? <Link to = "/signup" className="text-teal-blue">Sign Up</Link></p>
         </div>
