@@ -7,7 +7,6 @@ import facebook from "../assets/facebook.png"
 import instagram from "../assets/instagram.png"
 import linkedin from "../assets/linkedin.png"
 import web from "../assets/web.png"
-import { useNavigate } from "react-router-dom"
 import { useState , useEffect } from "react"
 import { Carousel } from "@material-tailwind/react"
 
@@ -19,7 +18,6 @@ const Login = () => {
     const [email , setEmail] = useState<FormData["email"]>("");
     const [password , setPassword] = useState<FormData["password"]>("");
     const [show , setShow] = useState(false);
-    const navigate = useNavigate();
     function submitHandler (e: React.FormEvent):void {
         e.preventDefault();
         const target = e.target as typeof e.target & {
@@ -28,7 +26,7 @@ const Login = () => {
         };
         setEmail(target.email.value);
         setPassword(target.password.value);
-        navigate("/" , { state: { email: email } });
+
     }
     
     useEffect(() => {
